@@ -9,7 +9,7 @@ import java.util.spi.ResourceBundleProvider;
 
 public class task3 {
     public static void main(String[] args) {
-        int[][] arr =new int[][] {{0, 1}, {1, 1}, {1, 0}};
+        int[][] arr = new int[][] {{0, 1}, {1, 1}, {1, 0}};
         int sum = arraySum(arr);
         if (sum == 1) {
             if (arr.length > arr[0].length) {

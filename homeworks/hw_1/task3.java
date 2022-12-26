@@ -8,18 +8,21 @@ import java.util.ArrayList;
 
 public class task3 {
     public static void main(String[] args) {
-        System.out.println(arr_diff(new int[] {1, 6, 3, 8, 23}, new int[] {1, 6, 3, 23}));
+        System.out.println(arr_diff(new int[] { 1, 6, 3, 8, 23 }, new int[] { 1, 6, 3, 23 }));
     }
 
-    private static void arr_diff (int[] arr1, int[] arr2) {
-        if (arr1.length != arr2.length) {
-            throw new RuntimeException("Массивы разной длины");
-        } else {
+    private static boolean arr_diff(int[] arr1, int[] arr2) {
+        try {
             for (int i = 0; i < arr2.length; i++) {
                 ArrayList<Integer> new_list = new ArrayList<>();
                 new_list.add(arr1[i] - arr2[i]);
                 System.out.println(new_list);
             }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Массивы разной длины");
+            throw new RuntimeException("Массивы разной длины");
+        } finally {
+            return true;
         }
     }
 }
