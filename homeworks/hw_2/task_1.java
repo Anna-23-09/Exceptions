@@ -9,7 +9,13 @@ import java.util.Scanner;
 
 public class task_1 {
     public static void main(String[] args) {
-        reading();
+         reading();
+    //  try (Scanner scanner = new Scanner(System.in);) {        
+    //     System.out.println("Введите дробное число: ");
+    //     if(scanner.next() instanceof String);
+    //  } catch (ClassCastException e) {
+    //     System.out.println("Error" + e);
+    //  }
     }
 
     public static void reading() {
